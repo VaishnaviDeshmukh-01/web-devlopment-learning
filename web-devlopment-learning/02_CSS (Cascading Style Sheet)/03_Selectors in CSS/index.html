@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /* Element Selector */
+        div{
+            color: red;
+        }
+
+        /* Class Selector */
+        .red{
+            background-color: yellow;
+        }
+        /* ID Selector */
+        #green{
+            background-color: palegreen;
+        }
+        /* Child Selector */
+        .red > p{
+            color: black;
+        }
+        /* Descendant Selector */
+        div p{
+            background-color: pink;
+        }
+        /* Universal Selector */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* Pseudo Selector  */
+        a:visited{
+            color: yellow;
+        }
+        a:link{
+            color: green;
+        }
+        a:hover{
+            background-color: pink;
+        }
+        a:active{
+            color: aliceblue;
+        }
+        p:first-child{
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Selectos</h1>
+    <main class="one">
+        <p>I am First</p>
+        <p>I am Second</p>
+    </main>
+    <div class="red">
+        I am a div
+    <p>I am a para inside div</p>
+    <article>
+        <p>
+            Hey i am also a para
+        </p>
+    </article>
+    </div>
+    <div id="green">I am also a div</div>
+    <a href="https://www.google.com">Open Google</a>
+</body>
+</html>
