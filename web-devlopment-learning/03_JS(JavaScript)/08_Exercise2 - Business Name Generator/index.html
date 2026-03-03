@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Name Generator</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 50px;
+            
+        }
+        .container{
+            background-color: #ffffff;
+            margin: 100px;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 130);
+            
+        }
+        button{
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #nameDisplay{
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Business Name Generator</h2>
+        <Button id="generateBtn">Generate Business Name</Button>
+        <p id="nameDisplay">Your business name will appear here!</p>
+    </div>
+    <script>
+        const adjectives = ["Creative", "Dynamic", "Bright", "Innovative", "NextGen"];
+        const shopnames = ["Corner", "Mart", "Deopt", "Hub", "Studio"];
+        const nouns = ["Solutions", "Studios", "Labs", "Ventures", "Concepts"];
+
+        const generateBtn = document.getElementById("generateBtn");
+        const nameDisplay = document.getElementById("nameDisplay");
+
+        function generateBusinessName() {
+            const adj = adjectives[Math.floor(Math.random() * adjectives.length)];
+            const noun = nouns[Math.floor(Math.random() * nouns.length)];
+            const shop = shopnames[Math.floor(Math.random() * shopnames.length)];
+        return `${adj} ${shop} ${noun}`;
+    }
+
+generateBtn.addEventListener("click", () => {
+  const name = generateBusinessName();
+  nameDisplay.textContent = name;
+});
+    </script>
+</body>
+</html>
