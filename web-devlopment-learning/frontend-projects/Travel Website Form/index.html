@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookYourTrip - Book your travel to Vietnam</title>
+    <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Page background */
+body{
+    background: linear-gradient(135deg,#4facfe,#00f2fe);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Heading */
+h1{
+    margin-bottom:20px;
+    color:white;
+}
+
+/* Form container */
+form{
+    background:white;
+    padding:30px;
+    width:350px;
+    border-radius:10px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Form fields spacing */
+form div{
+    margin-bottom:15px;
+}
+
+/* Labels */
+label{
+    display:block;
+    margin-bottom:5px;
+    font-weight:bold;
+}
+
+/* Inputs and textarea */
+input, textarea{
+    width:100%;
+    padding:8px;
+    border-radius:5px;
+    border:1px solid #ccc;
+    font-size:14px;
+}
+
+/* Textarea */
+textarea{
+    resize:none;
+}
+
+/* Button */
+button{
+    width:100%;
+    padding:10px;
+    background:#ff6b35;
+    border:none;
+    color:white;
+    font-size:16px;
+    border-radius:5px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+/* Button hover */
+button:hover{
+    background:#e85a2a;
+}
+    </style>
+</head>
+<body>
+    <h1>Let's Travel to Vietnam</h1>
+    <form action="/submit.php" method="post">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your Name">
+        </div>
+        <div>
+            <label for="age">Age:</label>
+            <input type="number" id="age" placeholder="Enter your Age">
+        </div>
+        <div>
+            <label for="number">Number:</label>
+            <input type="tel" id="number" placeholder="Enter your number">
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email">
+        </div>
+        <div>
+            <label for="address">Address:</label>
+            <textarea type="address" id="address" placeholder="Enter your address"></textarea>
+        </div>
+        <!-- <div>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter your password">
+        </div>
+        <div>
+
+            <label for="date">Date of birth:</label>
+            <input type="date" id="date" >
+        </div>
+        <div>
+            <label for="gender">Gender:</label>
+            <select id="gender" required>
+                <option value="" disabled selected>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div>
+            <p>Subscription Plans</p>
+            <input type="radio" name="subscription" id="basic" value="basic">
+            <label for="basic">Basic</label>
+            <input type="radio" name="subscription" id="premium" value="premium">
+            <label for="premium">Premium</label>
+            <input type="radio" name="subscription" id="vip" value="vip">
+            <label for="vip">VIP</label>
+        </div>
+        <div>
+            <input type="checkbox" id="terms" >
+            <label for="terms">Agreed terms and conditions</label>
+        </div>
+        <div>
+            <label for="comments">
+                Comments:
+            </label>
+            <textarea id="comments" placeholder="Enter your placeholder" rows="4"></textarea>
+        </div> -->
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+</html>
