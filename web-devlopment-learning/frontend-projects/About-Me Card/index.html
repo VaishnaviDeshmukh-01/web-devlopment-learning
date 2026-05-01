@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me Card</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f3f4f6;
+            padding: 20px;
+        }
+        .card{
+            width: 100%;
+            max-width: 340px;
+            padding: 32px 24px;
+            margin: 20px;
+            background: white;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 24px;
+            transition: all 0.3s ease;
+
+        }
+        .card:hover{
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        img{
+            border-radius: 50%;
+            height: 140px;
+            width: 140px;
+            border: 4px solid #e0f2fe;
+            object-fit: cover;
+            margin-bottom: 16px;
+        }
+        h2{
+            margin-bottom: 8px;
+            color: #1f2937;
+        }
+        p{
+            font-size: 14.5px;
+            color: #6b7280;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+
+        .skill {
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 6px 14px;
+            border-radius: 9999px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+        .buttons{
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+        }
+
+        .btn-secondary {
+            background: #e5e7eb;
+            color: #374151;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+        <div class="card">
+            <img src="profile-img.jpg" alt="Profile image">
+            <h2>Vaishnavi Deshmukh</h2>
+            <p>Ambitious learner focused on building real-world skills in web development and design. Currently exploring coding, creativity, and business ideas while working toward financial independence.</p>
+            <div class="skills">
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">UI/UX</span>
+        </div>
+            <div class="buttons">
+            <button class="btn-primary">Download CV</button>
+            <button class="btn-secondary">Contact Me</button>
+        </div>
+        </div>
+</body>
+</html>
