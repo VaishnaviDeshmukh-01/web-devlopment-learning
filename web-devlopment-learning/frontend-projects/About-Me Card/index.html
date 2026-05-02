@@ -3,79 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me Card</title>
+    <title>Vaishnavi Deshmukh | Aspiring Web Developer</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        body{
-            height: 100vh;
+
+        body {
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             background: #f3f4f6;
             padding: 20px;
+            transition: background 0.4s;
         }
-        .card{
+
+        .card {
             width: 100%;
-            max-width: 340px;
-            padding: 32px 24px;
-            margin: 20px;
+            max-width: 360px;
+            padding: 40px 28px;
             background: white;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border-radius: 24px;
-            transition: all 0.3s ease;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border-radius: 28px;
+            transition: all 0.4s ease;
+            position: relative;
+        }
 
+        .toggle-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 26px;
+            cursor: pointer;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            transition: 0.3s;
         }
-        .card:hover{
-            transform: translateY(-12px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+
+        .toggle-btn:hover { background: #f1f1f1; }
+
+        /* Dark Mode */
+        body.dark-mode { background: #1f2937; }
+        .card.dark-mode {
+            background: #111827;
+            color: #f1f5f9;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
         }
-        img{
+        .card.dark-mode h2 { color: #f1f5f9; }
+        .card.dark-mode p { color: #9ca3af; }
+        .card.dark-mode .skill { background: #334155; color: #60a5fa; }
+        .card.dark-mode .btn-primary { background: #3b82f6; }
+        .card.dark-mode .btn-secondary { background: #475569; color: #e2e8f0; }
+        .card.dark-mode .like-btn { background: #f87171; }
+        .card.dark-mode img { border-color: #475569; }
+
+        img {
             border-radius: 50%;
             height: 140px;
             width: 140px;
-            border: 4px solid #e0f2fe;
+            border: 5px solid #e0f2fe;
             object-fit: cover;
-            margin-bottom: 16px;
-        }
-        h2{
-            margin-bottom: 8px;
-            color: #1f2937;
-        }
-        p{
-            font-size: 14.5px;
-            color: #6b7280;
-            line-height: 1.5;
             margin-bottom: 20px;
         }
+
+        h2 { margin-bottom: 10px; color: #1f2937; }
+        p { font-size: 15px; color: #6b7280; line-height: 1.6; margin-bottom: 24px; }
+
         .skills {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 10px;
             justify-content: center;
-            margin-bottom: 24px;
+            margin-bottom: 28px;
         }
 
         .skill {
             background: #e0f2fe;
             color: #0369a1;
-            padding: 6px 14px;
+            padding: 8px 16px;
             border-radius: 9999px;
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 500;
+            cursor: pointer;
+            transition: 0.3s;
         }
-        .buttons{
+
+        .skill:hover { transform: scale(1.05); }
+
+        .buttons {
             display: flex;
             flex-direction: column;
             gap: 12px;
         }
+
+        @media (min-width: 480px) {
+            .buttons { flex-direction: row; justify-content: center; }
+            .buttons button { flex: 1; max-width: 170px; }
+        }
+
         button {
-            padding: 12px 20px;
+            padding: 14px 20px;
             border: none;
             border-radius: 12px;
             font-size: 15px;
@@ -84,40 +120,76 @@
             transition: all 0.3s;
         }
 
-        .btn-primary {
-            background: #2563eb;
-            color: white;
-        }
+        .btn-primary { background: #2563eb; color: white; }
+        .btn-secondary { background: #e5e7eb; color: #374151; }
+        .like-btn { background: #ef4444; color: white; }
 
-        .btn-secondary {
-            background: #e5e7eb;
-            color: #374151;
-        }
-
-        button:hover {
-            transform: translateY(-2px);
-        }
-
-        .btn-primary:hover {
-            background: #1d4ed8;
-        }
+        button:hover { transform: translateY(-3px); }
+        .btn-primary:hover { background: #1d4ed8; }
     </style>
 </head>
 <body>
-        <div class="card">
-            <img src="profile-img.jpg" alt="Profile image">
-            <h2>Vaishnavi Deshmukh</h2>
-            <p>Ambitious learner focused on building real-world skills in web development and design. Currently exploring coding, creativity, and business ideas while working toward financial independence.</p>
-            <div class="skills">
+    <div class="card">
+        <div class="toggle-btn">☀️</div>
+        <img src="https://picsum.photos/id/64/300/300" alt="Vaishnavi">
+        <h2>Vaishnavi Deshmukh</h2>
+        <p>Ambitious learner focused on building real-world skills in web development and design. Currently exploring coding, creativity, and business ideas.</p>
+        
+        <div class="skills">
             <span class="skill">HTML</span>
             <span class="skill">CSS</span>
             <span class="skill">JavaScript</span>
             <span class="skill">UI/UX</span>
         </div>
-            <div class="buttons">
+
+        <div class="buttons">
             <button class="btn-primary">Download CV</button>
             <button class="btn-secondary">Contact Me</button>
+            <button class="like-btn">❤️ 0</button>
         </div>
-        </div>
+    </div>
+
+    <script>
+        const toggleBtn = document.querySelector(".toggle-btn");
+        const card = document.querySelector(".card");
+        const likeBtn = document.querySelector(".like-btn");
+        let likeCount = 0;
+
+        function toggleDarkMode() {
+            card.classList.toggle("dark-mode");
+            document.body.classList.toggle("dark-mode");
+            toggleBtn.textContent = card.classList.contains("dark-mode") ? "🌙" : "☀️";
+            localStorage.setItem("darkMode", card.classList.contains("dark-mode") ? "enabled" : "disabled");
+        }
+
+        function loadDarkMode() {
+            if (localStorage.getItem("darkMode") === "enabled") {
+                card.classList.add("dark-mode");
+                document.body.classList.add("dark-mode");
+                toggleBtn.textContent = "🌙";
+            }
+        }
+
+        // Like Button
+        likeBtn.addEventListener('click', () => {
+            likeCount++;
+            likeBtn.textContent = `❤️ ${likeCount}`;
+            likeBtn.style.transform = "scale(1.5)";
+            setTimeout(() => likeBtn.style.transform = "scale(1)", 200);
+        });
+
+        // Skills
+        document.querySelectorAll(".skill").forEach(skill => {
+            skill.addEventListener("click", () => alert(`You clicked on ${skill.textContent}`));
+        });
+
+        // Contact Me
+        document.querySelector('.btn-secondary').addEventListener('click', () => {
+            alert("Thank you! My email: deshmukh.vaishnavi1410@gmail.com");
+        });
+
+        toggleBtn.addEventListener('click', toggleDarkMode);
+        loadDarkMode();
+    </script>
 </body>
 </html>
